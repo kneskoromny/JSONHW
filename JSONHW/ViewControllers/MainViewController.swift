@@ -8,16 +8,22 @@
 import UIKit
 
 enum URLExamples: String {
-    case nasaAPOD = "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY"
+    case nasaAPOD = "https://api.nasa.gov/planetary/apod?api_key=lKtTVBLWcJwffu52fyYVGG2E8tjyEsp04LWMtLtx"
     
 }
 
-class ViewController: UIViewController {
+class MainViewController: UIViewController {
 
     
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let apodVC = segue.destination as! APODViewController
+        apodVC.fetchAPOD()
         
     }
 
@@ -77,8 +83,9 @@ class ViewController: UIViewController {
             // декодируем файл по нашей структуре
             do {
                 let nasaPicture = try JSONDecoder().decode(NasaPOD.self, from: data)
+            
                 self.successAlert()
-                print(nasaPicture)
+
             } catch let error {
                 self.failedAlert()
                 print(error.localizedDescription)

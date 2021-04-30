@@ -9,25 +9,27 @@
 /* Begin PBXBuildFile section */
 		F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215B263C36720018A5F7 /* AppDelegate.swift */; };
 		F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215D263C36720018A5F7 /* SceneDelegate.swift */; };
-		F7A52160263C36720018A5F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215F263C36720018A5F7 /* ViewController.swift */; };
+		F7A52160263C36720018A5F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215F263C36720018A5F7 /* MainViewController.swift */; };
 		F7A52163263C36720018A5F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A52161263C36720018A5F7 /* Main.storyboard */; };
 		F7A52165263C36740018A5F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F7A52164263C36740018A5F7 /* Assets.xcassets */; };
 		F7A52168263C36740018A5F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F7A52166263C36740018A5F7 /* LaunchScreen.storyboard */; };
 		F7A52176263C4DBC0018A5F7 /* NASAPicture.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A52175263C4DBB0018A5F7 /* NASAPicture.swift */; };
 		F7A5217A263C4F9D0018A5F7 /* NASAPictureRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A52179263C4F9D0018A5F7 /* NASAPictureRequest.swift */; };
+		F7A5217C263C5AA20018A5F7 /* APODViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5217B263C5AA20018A5F7 /* APODViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F7A52158263C36720018A5F7 /* JSONHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5215B263C36720018A5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A5215D263C36720018A5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		F7A5215F263C36720018A5F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F7A5215F263C36720018A5F7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		F7A52162263C36720018A5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F7A52164263C36740018A5F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F7A52167263C36740018A5F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F7A52169263C36740018A5F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F7A52175263C4DBB0018A5F7 /* NASAPicture.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPicture.swift; sourceTree = SOURCE_ROOT; };
 		F7A52179263C4F9D0018A5F7 /* NASAPictureRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NASAPictureRequest.swift; sourceTree = "<group>"; };
+		F7A5217B263C5AA20018A5F7 /* APODViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APODViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +85,8 @@
 		F7A52170263C372B0018A5F7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F7A5215F263C36720018A5F7 /* ViewController.swift */,
+				F7A5215F263C36720018A5F7 /* MainViewController.swift */,
+				F7A5217B263C5AA20018A5F7 /* APODViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,7 +194,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F7A52160263C36720018A5F7 /* ViewController.swift in Sources */,
+				F7A5217C263C5AA20018A5F7 /* APODViewController.swift in Sources */,
+				F7A52160263C36720018A5F7 /* MainViewController.swift in Sources */,
 				F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */,
 				F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */,
 				F7A52176263C4DBC0018A5F7 /* NASAPicture.swift in Sources */,
