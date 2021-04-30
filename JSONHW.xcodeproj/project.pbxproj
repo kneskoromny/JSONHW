@@ -56,15 +56,63 @@
 		F7A5215A263C36720018A5F7 /* JSONHW */ = {
 			isa = PBXGroup;
 			children = (
-				F7A5215B263C36720018A5F7 /* AppDelegate.swift */,
-				F7A5215D263C36720018A5F7 /* SceneDelegate.swift */,
-				F7A5215F263C36720018A5F7 /* ViewController.swift */,
-				F7A52161263C36720018A5F7 /* Main.storyboard */,
-				F7A52164263C36740018A5F7 /* Assets.xcassets */,
-				F7A52166263C36740018A5F7 /* LaunchScreen.storyboard */,
-				F7A52169263C36740018A5F7 /* Info.plist */,
+				F7A52170263C372B0018A5F7 /* ViewControllers */,
+				F7A52173263C37630018A5F7 /* Models */,
+				F7A52172263C374C0018A5F7 /* Storyboards */,
+				F7A52174263C379F0018A5F7 /* Services */,
+				F7A5216F263C37170018A5F7 /* Supports */,
+				F7A52171263C373B0018A5F7 /* Resources */,
 			);
 			path = JSONHW;
+			sourceTree = "<group>";
+		};
+		F7A5216F263C37170018A5F7 /* Supports */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5215B263C36720018A5F7 /* AppDelegate.swift */,
+				F7A5215D263C36720018A5F7 /* SceneDelegate.swift */,
+				F7A52169263C36740018A5F7 /* Info.plist */,
+			);
+			path = Supports;
+			sourceTree = "<group>";
+		};
+		F7A52170263C372B0018A5F7 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F7A5215F263C36720018A5F7 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F7A52171263C373B0018A5F7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F7A52164263C36740018A5F7 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F7A52172263C374C0018A5F7 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				F7A52161263C36720018A5F7 /* Main.storyboard */,
+				F7A52166263C36740018A5F7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		F7A52173263C37630018A5F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7A52174263C379F0018A5F7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TB5VXYZS9X;
-				INFOPLIST_FILE = JSONHW/Info.plist;
+				INFOPLIST_FILE = JSONHW/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -307,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = TB5VXYZS9X;
-				INFOPLIST_FILE = JSONHW/Info.plist;
+				INFOPLIST_FILE = JSONHW/Supports/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
