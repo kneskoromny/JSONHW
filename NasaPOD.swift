@@ -16,10 +16,11 @@ struct NasaPOD: Decodable {
     
     var description: String {
         """
-        AstroPhotoOfTheDay!
-        Here you can see \(title ?? "")
-        This photo was shooted \(copyright ?? "someone")
-        \(date ?? "sometime")
+        Enjoy NASA AstroPhotoOfTheDay \(date ?? "sometime")!
+        It's named
+        "\(title ?? "")".
+        This photo was uploaded by \(copyright ?? "copyright is unknown").
+        
         """
     }
 }

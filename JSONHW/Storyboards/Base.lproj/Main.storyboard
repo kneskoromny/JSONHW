@@ -110,17 +110,16 @@
             </objects>
             <point key="canvasLocation" x="18.840579710144929" y="88.392857142857139"/>
         </scene>
-        <!--View Controller-->
+        <!--NasaPOD View Controller-->
         <scene sceneID="hd5-CI-NqF">
             <objects>
-                <viewController id="63o-o1-hnu" customClass="APODViewController" customModule="JSONHW" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="63o-o1-hnu" customClass="NasaPODViewController" customModule="JSONHW" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="blQ-Ta-isF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MjO-hY-qdV">
                                 <rect key="frame" x="16" y="20" width="288" height="250.5"/>
-                                <color key="backgroundColor" red="0.69678539037704468" green="0.93292111158370972" blue="0.74417906999588013" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="288" id="iSl-Hp-fZA"/>
                                     <constraint firstAttribute="height" constant="250.5" id="x09-eI-Uqv"/>
@@ -131,9 +130,12 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="f2p-K7-tWJ">
+                                <rect key="frame" x="150" y="135.5" width="20" height="20"/>
+                            </activityIndicatorView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m3h-7a-M83">
-                                <rect key="frame" x="16" y="280.5" width="288" height="30"/>
-                                <fontDescription key="fontDescription" name="AppleSDGothicNeo-Regular" family="Apple SD Gothic Neo" pointSize="25"/>
+                                <rect key="frame" x="16" y="280.5" width="288" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -142,13 +144,16 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="m3h-7a-M83" firstAttribute="width" secondItem="MjO-hY-qdV" secondAttribute="width" id="6Nv-pW-JC3"/>
+                            <constraint firstItem="f2p-K7-tWJ" firstAttribute="centerX" secondItem="MjO-hY-qdV" secondAttribute="centerX" id="8wB-4W-gQx"/>
                             <constraint firstItem="MjO-hY-qdV" firstAttribute="top" secondItem="Fie-nb-f60" secondAttribute="top" constant="20" id="A90-we-s4s"/>
                             <constraint firstItem="m3h-7a-M83" firstAttribute="centerX" secondItem="blQ-Ta-isF" secondAttribute="centerX" id="Dbj-NB-hgY"/>
+                            <constraint firstItem="f2p-K7-tWJ" firstAttribute="centerY" secondItem="MjO-hY-qdV" secondAttribute="centerY" id="DuC-0a-JHs"/>
                             <constraint firstItem="m3h-7a-M83" firstAttribute="top" secondItem="MjO-hY-qdV" secondAttribute="bottom" constant="10" id="gsV-k1-vAj"/>
                             <constraint firstItem="MjO-hY-qdV" firstAttribute="centerX" secondItem="blQ-Ta-isF" secondAttribute="centerX" id="sjO-Zo-YfU"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="f2p-K7-tWJ" id="z1D-h5-NlK"/>
                         <outlet property="descriptionLabel" destination="m3h-7a-M83" id="Wxc-mv-fO5"/>
                         <outlet property="imageView" destination="MjO-hY-qdV" id="M0C-RH-eAu"/>
                     </connections>

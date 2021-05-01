@@ -9,6 +9,7 @@ import UIKit
 
 enum URLExamples: String {
     case nasaAPOD = "https://api.nasa.gov/planetary/apod?api_key=lKtTVBLWcJwffu52fyYVGG2E8tjyEsp04LWMtLtx"
+    case happyObama = "http://apimeme.com/meme?meme=2nd-Term-Obama&top=&bottom=когда+распарсил+свой+первый+json"
     
 }
 
@@ -22,16 +23,17 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let apodVC = segue.destination as! APODViewController
+        let apodVC = segue.destination as! NasaPODViewController
         apodVC.fetchAPOD()
         
     }
 
     //MARK: - IB Actions
     @IBAction func buttonOnePressed(_ sender: UIButton) {
-        buttonOnePressed()
+//        buttonOnePressed()
     }
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
+        buttonPressed()
     }
     @IBAction func buttonThreePressed(_ sender: UIButton) {
     }
@@ -69,9 +71,10 @@ class MainViewController: UIViewController {
         }
     }
    
-    private func buttonOnePressed() {
+    // метод для предварительного вывода в консоль
+    private func buttonPressed() {
         // присвоили переменной String адрес, по которому собираемся переходить
-        guard let url = URL(string: URLExamples.nasaAPOD.rawValue) else { return }
+        guard let url = URL(string: URLExamples.happyObama.rawValue) else { return }
         
         // запускаем сессию по нашей ссылке
         URLSession.shared.dataTask(with: url) { data, _, error in
@@ -80,15 +83,11 @@ class MainViewController: UIViewController {
                 print(error?.localizedDescription ?? "No error description!")
                 return
             }
-            // декодируем файл по нашей структуре
-            do {
-                let nasaPicture = try JSONDecoder().decode(NasaPOD.self, from: data)
-            
+            if let image = UIImage(data: data) {
+                print(image)
                 self.successAlert()
-
-            } catch let error {
+            } else {
                 self.failedAlert()
-                print(error.localizedDescription)
             }
             
         }.resume() // обязательный метод в конце сессии
