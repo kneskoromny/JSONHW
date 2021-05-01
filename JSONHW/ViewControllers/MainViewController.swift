@@ -9,7 +9,7 @@ import UIKit
 
 enum URLExamples: String {
     case nasaAPOD = "https://api.nasa.gov/planetary/apod?api_key=lKtTVBLWcJwffu52fyYVGG2E8tjyEsp04LWMtLtx"
-    case happyObama = "http://apimeme.com/meme?meme=2nd-Term-Obama&top=&bottom=когда+распарсил+свой+первый+json"
+    case happyObama = "https://i.postimg.cc/9XD970g1/image.jpg"
     
 }
 
@@ -23,7 +23,7 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let apodVC = segue.destination as! NasaPODViewController
+        guard let apodVC = segue.destination as? NasaPODViewController else { return }
         apodVC.fetchAPOD()
         
     }
@@ -33,7 +33,7 @@ class MainViewController: UIViewController {
 //        buttonOnePressed()
     }
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
-        buttonPressed()
+        performSegue(withIdentifier: "showObama", sender: nil)
     }
     @IBAction func buttonThreePressed(_ sender: UIButton) {
     }
