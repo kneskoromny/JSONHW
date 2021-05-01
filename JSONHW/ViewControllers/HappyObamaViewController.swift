@@ -16,6 +16,8 @@ class HappyObamaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        imageView.layer.cornerRadius = imageView.frame.height / 10
+        
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         fetchImage()

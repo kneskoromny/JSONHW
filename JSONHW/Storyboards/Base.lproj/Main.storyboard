@@ -119,6 +119,11 @@
                                     <constraint firstAttribute="height" constant="237" id="gL9-yE-t0M"/>
                                     <constraint firstAttribute="width" constant="288" id="iR9-EH-XB6"/>
                                 </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yC7-2Z-mp6">
                                 <rect key="frame" x="150" y="264" width="20" height="20"/>

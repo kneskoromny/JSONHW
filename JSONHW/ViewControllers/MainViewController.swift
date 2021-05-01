@@ -20,8 +20,6 @@ class MainViewController: UIViewController {
     
     @IBOutlet weak var topButton: SpringButton!
     @IBOutlet weak var midButton: SpringButton!
-    @IBOutlet weak var botButton: SpringButton!
-    
     
     //MARK: - Override methods
     override func viewDidLoad() {
@@ -31,7 +29,7 @@ class MainViewController: UIViewController {
         springLabel.animate()
         
         buttonAnimate(object: topButton, animation: "slideRight", delay: 1.0, force: 1.5)
-        buttonAnimate(object: midButton, animation: "slideLeft", delay: 1.5, force: 1.5)
+        buttonAnimate(object: midButton, animation: "slideLeft", delay: 2.0, force: 1.5)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -81,26 +79,26 @@ class MainViewController: UIViewController {
     }
    
     // метод для предварительного вывода в консоль
-    private func buttonPressed() {
-        // присвоили переменной String адрес, по которому собираемся переходить
-        guard let url = URL(string: URLExamples.happyObama.rawValue) else { return }
-        
-        // запускаем сессию по нашей ссылке
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            // проверяем наличие данных
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description!")
-                return
-            }
-            if let image = UIImage(data: data) {
-                print(image)
-                self.successAlert()
-            } else {
-                self.failedAlert()
-            }
-            
-        }.resume() // обязательный метод в конце сессии
-    }
+//    private func buttonPressed() {
+//        // присвоили переменной String адрес, по которому собираемся переходить
+//        guard let url = URL(string: URLExamples.happyObama.rawValue) else { return }
+//        
+//        // запускаем сессию по нашей ссылке
+//        URLSession.shared.dataTask(with: url) { data, _, error in
+//            // проверяем наличие данных
+//            guard let data = data else {
+//                print(error?.localizedDescription ?? "No error description!")
+//                return
+//            }
+//            if let image = UIImage(data: data) {
+//                print(image)
+//                self.successAlert()
+//            } else {
+//                self.failedAlert()
+//            }
+//            
+//        }.resume() // обязательный метод в конце сессии
+//    }
     
     private func buttonAnimate(object: SpringButton, animation: String, delay: CGFloat, force: CGFloat) {
         object.animation = animation
