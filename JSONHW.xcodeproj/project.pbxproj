@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7EDC34A3B5E2957BB99DA6F0 /* Pods_JSONHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3209A6738BAD1F2049DF63D4 /* Pods_JSONHW.framework */; };
 		F7968397263D5BAA00EDE3B4 /* HappyObamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */; };
 		F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215B263C36720018A5F7 /* AppDelegate.swift */; };
 		F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215D263C36720018A5F7 /* SceneDelegate.swift */; };
@@ -19,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3209A6738BAD1F2049DF63D4 /* Pods_JSONHW.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JSONHW.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1F57A64A5DF9DA3724FD3D /* Pods-JSONHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONHW.debug.xcconfig"; path = "Target Support Files/Pods-JSONHW/Pods-JSONHW.debug.xcconfig"; sourceTree = "<group>"; };
+		A94C1241C6893658EA0D5CAD /* Pods-JSONHW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONHW.release.xcconfig"; path = "Target Support Files/Pods-JSONHW/Pods-JSONHW.release.xcconfig"; sourceTree = "<group>"; };
 		F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyObamaViewController.swift; sourceTree = "<group>"; };
 		F7A52158263C36720018A5F7 /* JSONHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5215B263C36720018A5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,17 +41,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EDC34A3B5E2957BB99DA6F0 /* Pods_JSONHW.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9FBD75362166F7DC47C8F7A2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E1F57A64A5DF9DA3724FD3D /* Pods-JSONHW.debug.xcconfig */,
+				A94C1241C6893658EA0D5CAD /* Pods-JSONHW.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		ED986DF48BD002FE7F2DE6E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3209A6738BAD1F2049DF63D4 /* Pods_JSONHW.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F7A5214F263C36720018A5F7 = {
 			isa = PBXGroup;
 			children = (
 				F7A5215A263C36720018A5F7 /* JSONHW */,
 				F7A52159263C36720018A5F7 /* Products */,
+				9FBD75362166F7DC47C8F7A2 /* Pods */,
+				ED986DF48BD002FE7F2DE6E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F7A5216C263C36740018A5F7 /* Build configuration list for PBXNativeTarget "JSONHW" */;
 			buildPhases = (
+				DB791BBAD0D59C4C87F58A5C /* [CP] Check Pods Manifest.lock */,
 				F7A52154263C36720018A5F7 /* Sources */,
 				F7A52155263C36720018A5F7 /* Frameworks */,
 				F7A52156263C36720018A5F7 /* Resources */,
+				1159E4EE4F3562A5799BD31F /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -188,6 +215,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1159E4EE4F3562A5799BD31F /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JSONHW/Pods-JSONHW-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JSONHW/Pods-JSONHW-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JSONHW/Pods-JSONHW-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB791BBAD0D59C4C87F58A5C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-JSONHW-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F7A52154263C36720018A5F7 /* Sources */ = {
@@ -343,6 +412,7 @@
 		};
 		F7A5216D263C36740018A5F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E1F57A64A5DF9DA3724FD3D /* Pods-JSONHW.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -362,6 +432,7 @@
 		};
 		F7A5216E263C36740018A5F7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A94C1241C6893658EA0D5CAD /* Pods-JSONHW.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
