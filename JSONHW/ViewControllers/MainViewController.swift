@@ -5,7 +5,8 @@
 //  Created by Кирилл Нескоромный on 30.04.2021.
 //
 
-import UIKit
+import Spring
+
 
 enum URLExamples: String {
     case nasaAPOD = "https://api.nasa.gov/planetary/apod?api_key=lKtTVBLWcJwffu52fyYVGG2E8tjyEsp04LWMtLtx"
@@ -15,11 +16,23 @@ enum URLExamples: String {
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var springLabel: SpringLabel!
+    
+    @IBOutlet weak var topButton: SpringButton!
+    @IBOutlet weak var midButton: SpringButton!
+    @IBOutlet weak var botButton: SpringButton!
+    
     
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        springLabel.animation = "slideDown"
+        springLabel.animate()
+        
+        buttonAnimate(object: topButton, animation: "slideRight", delay: 1.0, force: 1.5)
+        buttonAnimate(object: midButton, animation: "slideLeft", delay: 1.5, force: 1.5)
+        buttonAnimate(object: botButton, animation: "slideRight", delay: 2.0, force: 1.5)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -91,6 +104,13 @@ class MainViewController: UIViewController {
             }
             
         }.resume() // обязательный метод в конце сессии
+    }
+    
+    private func buttonAnimate(object: SpringButton, animation: String, delay: CGFloat, force: CGFloat) {
+        object.animation = animation
+        object.delay = delay
+        object.force = force
+        object.animate()
     }
     
     
