@@ -32,7 +32,6 @@ class MainViewController: UIViewController {
         
         buttonAnimate(object: topButton, animation: "slideRight", delay: 1.0, force: 1.5)
         buttonAnimate(object: midButton, animation: "slideLeft", delay: 1.5, force: 1.5)
-        buttonAnimate(object: botButton, animation: "slideRight", delay: 2.0, force: 1.5)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -48,10 +47,7 @@ class MainViewController: UIViewController {
     @IBAction func buttonTwoPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showObama", sender: nil)
     }
-    @IBAction func buttonThreePressed(_ sender: UIButton) {
-    }
-    @IBAction func buttonFourPressed(_ sender: UIButton) {
-    }
+   
     
     //MARK: - Private Methods
     

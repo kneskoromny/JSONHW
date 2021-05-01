@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="MYx-9l-FmS">
-                                <rect key="frame" x="16" y="186" width="288" height="196"/>
+                                <rect key="frame" x="16" y="227" width="288" height="114"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z4-jQ-hof" customClass="SpringButton" customModule="Spring">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
@@ -61,22 +61,6 @@
                                             <segue destination="63o-o1-hnu" kind="presentation" identifier="showAPOD" id="ApA-Dh-Bob"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Zk-sP-gap" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="164" width="288" height="32"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
-                                        <state key="normal" title="Button 3">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        </state>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                <integer key="value" value="10"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                        <connections>
-                                            <action selector="buttonThreePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="POH-em-Wh1"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чтобы сегодня поделать?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i52-EP-Ceb" customClass="SpringLabel" customModule="Spring">
@@ -112,7 +96,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="botButton" destination="5Zk-sP-gap" id="HqF-fX-0B3"/>
                         <outlet property="midButton" destination="8b8-Wy-DyG" id="fXr-dh-bn2"/>
                         <outlet property="springLabel" destination="i52-EP-Ceb" id="390-49-r6m"/>
                         <outlet property="topButton" destination="2Z4-jQ-hof" id="ogn-cz-u1M"/>
@@ -157,7 +140,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YVA-Ch-lzg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922.5" y="-620.07042253521126"/>
+            <point key="canvasLocation" x="923" y="-293"/>
         </scene>
         <!--NasaPOD View Controller-->
         <scene sceneID="hd5-CI-NqF">
@@ -209,7 +192,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fOs-nT-ztE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="924" y="88"/>
+            <point key="canvasLocation" x="923" y="390"/>
         </scene>
     </scenes>
     <resources>
