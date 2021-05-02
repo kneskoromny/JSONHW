@@ -14,9 +14,7 @@ class NasaPODViewController: UIViewController {
     var apod: NasaPOD?
     
     //MARK: - IB Outlets
-    
     @IBOutlet weak var imageView: UIImageView!
-    
     
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     
@@ -31,8 +29,8 @@ class NasaPODViewController: UIViewController {
         activityIndicator.hidesWhenStopped = true
         
         descriptionLabel.text = """
-            Please, wait few seconds.
-            Now we're uploading something interesting for you:)
+            Пожалуйста, подождите пару секунд.
+            Сейчас я загружаю кое-что интересное для Вас:)
             """
     }
 }
@@ -54,10 +52,13 @@ extension NasaPODViewController {
             do {
                 // пытаемся сразу присвоить значение переменной внутри контроллера, декодируя json
                 self.apod = try JSONDecoder().decode(NasaPOD.self, from: data)
+                
                 // работа с картинкой - создаем переменную с URL адресом по string из json
                 guard let imageURL = URL(string: self.apod?.url ?? "") else { return }
+                
                 // создаем переменную типа Data по инициализатору URL
                 guard let imageData = try? Data(contentsOf: imageURL) else { return }
+                
                 // переключаемся на главный поток
                 DispatchQueue.main.async {
                     // обновляем значение лейбла
@@ -66,9 +67,8 @@ extension NasaPODViewController {
                     self.imageView.image = UIImage(data: imageData)
                     // останавливаем activityIndicator
                     self.activityIndicator.stopAnimating()
-                    
                 }
-                
+              // ловим ошибку, если она есть
             } catch let error {
                 print(error.localizedDescription)
             }

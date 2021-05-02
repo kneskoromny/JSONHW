@@ -39,7 +39,6 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="animation" value="&quot;slideLeft&quot;"/>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="buttonTwoPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="I8b-zN-oU9"/>
                                             <segue destination="EQj-Q5-EMr" kind="presentation" identifier="showObama" id="fqf-Dh-mbF"/>
                                         </connections>
                                     </button>
@@ -55,7 +54,6 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <action selector="buttonOnePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Qe4-Is-D9X"/>
                                             <segue destination="63o-o1-hnu" kind="presentation" identifier="showAPOD" id="ApA-Dh-Bob"/>
                                         </connections>
                                     </button>
@@ -67,7 +65,7 @@
                                     <constraint firstAttribute="height" constant="69" id="dh8-64-19k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
