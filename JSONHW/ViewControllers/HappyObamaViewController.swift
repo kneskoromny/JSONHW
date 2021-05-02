@@ -28,12 +28,11 @@ class HappyObamaViewController: UIViewController {
     private func fetchImage() {
         guard let url = URL(string: URLExamples.happyObama.rawValue) else { return }
         
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard let data = data, let response = response else {
+        URLSession.shared.dataTask(with: url) { (data, _, error) in
+            guard let data = data else {
                 print(error?.localizedDescription ?? "No error description")
                 return
             }
-            print("!!!!!!!", response)
             guard let image = UIImage(data: data) else { return }
             
             DispatchQueue.main.async {
@@ -42,8 +41,4 @@ class HappyObamaViewController: UIViewController {
             }
         }.resume()
     }
-    
-
-  
-
 }

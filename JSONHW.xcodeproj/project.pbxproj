@@ -3,12 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		7EDC34A3B5E2957BB99DA6F0 /* Pods_JSONHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3209A6738BAD1F2049DF63D4 /* Pods_JSONHW.framework */; };
 		F7968397263D5BAA00EDE3B4 /* HappyObamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */; };
+		F79683A7263DC81C00EDE3B4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79683A6263DC81C00EDE3B4 /* NetworkManager.swift */; };
 		F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215B263C36720018A5F7 /* AppDelegate.swift */; };
 		F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215D263C36720018A5F7 /* SceneDelegate.swift */; };
 		F7A52160263C36720018A5F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215F263C36720018A5F7 /* MainViewController.swift */; };
@@ -24,6 +25,7 @@
 		3E1F57A64A5DF9DA3724FD3D /* Pods-JSONHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONHW.debug.xcconfig"; path = "Target Support Files/Pods-JSONHW/Pods-JSONHW.debug.xcconfig"; sourceTree = "<group>"; };
 		A94C1241C6893658EA0D5CAD /* Pods-JSONHW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONHW.release.xcconfig"; path = "Target Support Files/Pods-JSONHW/Pods-JSONHW.release.xcconfig"; sourceTree = "<group>"; };
 		F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyObamaViewController.swift; sourceTree = "<group>"; };
+		F79683A6263DC81C00EDE3B4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		F7A52158263C36720018A5F7 /* JSONHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5215B263C36720018A5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A5215D263C36720018A5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -54,7 +56,6 @@
 				3E1F57A64A5DF9DA3724FD3D /* Pods-JSONHW.debug.xcconfig */,
 				A94C1241C6893658EA0D5CAD /* Pods-JSONHW.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -145,6 +146,7 @@
 		F7A52174263C379F0018A5F7 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				F79683A6263DC81C00EDE3B4 /* NetworkManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -266,6 +268,7 @@
 				F7A5217C263C5AA20018A5F7 /* NasaPODViewController.swift in Sources */,
 				F7A52160263C36720018A5F7 /* MainViewController.swift in Sources */,
 				F7968397263D5BAA00EDE3B4 /* HappyObamaViewController.swift in Sources */,
+				F79683A7263DC81C00EDE3B4 /* NetworkManager.swift in Sources */,
 				F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */,
 				F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */,
 				F7A52176263C4DBC0018A5F7 /* NasaPOD.swift in Sources */,

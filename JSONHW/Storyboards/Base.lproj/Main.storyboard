@@ -17,13 +17,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="MYx-9l-FmS">
-                                <rect key="frame" x="16" y="227" width="288" height="114"/>
+                                <rect key="frame" x="16" y="228" width="288" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Z4-jQ-hof" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
-                                        <state key="normal" title="заценить Обаму">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="31"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                                        <state key="normal" title="заценить Барака Обаму">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -45,10 +44,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8b8-Wy-DyG" customClass="SpringButton" customModule="Spring">
-                                        <rect key="frame" x="0.0" y="82" width="288" height="32"/>
-                                        <color key="backgroundColor" systemColor="systemOrangeColor"/>
-                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="20"/>
-                                        <state key="normal" title="посмотреть фотки NASA">
+                                        <rect key="frame" x="0.0" y="81" width="288" height="31"/>
+                                        <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="19"/>
+                                        <state key="normal" title="посмотреть фото дня NASA">
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         </state>
                                         <userDefinedRuntimeAttributes>
@@ -63,13 +61,13 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Чтобы сегодня поделать?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i52-EP-Ceb" customClass="SpringLabel" customModule="Spring">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Что бы такого сегодня поделать?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i52-EP-Ceb" customClass="SpringLabel" customModule="Spring">
                                 <rect key="frame" x="16" y="67" width="288" height="69"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="69" id="dh8-64-19k"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="Courier" family="Courier" pointSize="25"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="autostart" value="NO"/>
@@ -203,9 +201,6 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
