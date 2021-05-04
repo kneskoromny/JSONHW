@@ -12,7 +12,7 @@ class NetworkManager {
     static let shared = NetworkManager()
     private init() {}
     
-    func fetchData(from url: String?, with completion: @escaping (NasaPOD) -> Void) {
+    func fetchAPOD(from url: String?, with completion: @escaping (NasaPOD) -> Void) {
         guard let stringURL = url else { return }
         guard let contentURL = URL(string: stringURL) else { return }
        
@@ -31,6 +31,27 @@ class NetworkManager {
             } catch let error {
                 print(error)
             }
+        }.resume()
+    }
+    
+    func fetchJoke(from url: String?, with completion: @escaping ([Joke]) -> Void) {
+        guard let stringURL = url else { return }
+        guard let contentURL = URL(string: stringURL) else { return }
+        
+        URLSession.shared.dataTask(with: contentURL) { data, response, error in
+            guard let data = data else {
+                print("error 1")
+                print(error?.localizedDescription ?? "No error description!")
+                return
+            }
+            do {
+                let jokes = try JSONDecoder().decode([Joke].self, from: data)
+                print("super 2")
+                completion(jokes)
+            } catch let error {
+                print(error)
+            }
+            
         }.resume()
     }
     
