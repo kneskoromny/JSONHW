@@ -10,7 +10,6 @@ import UIKit
 class NasaPODViewController: UIViewController {
     
     //MARK: - Public properties
-    // локальная переменная, в которую будем декодить json
     var apod: NasaPOD?
     
     //MARK: - IB Outlets
@@ -23,57 +22,28 @@ class NasaPODViewController: UIViewController {
     //MARK: - Override methods
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // запускаем activityIndicator
+       
         activityIndicator.startAnimating()
         activityIndicator.hidesWhenStopped = true
         
         descriptionLabel.text = """
             Пожалуйста, подождите пару секунд.
-            Сейчас я загружаю кое-что интересное для Вас:)
+            Я загружаю кое-что интересное для Вас:)
             """
+        fetchData(from: APIManager.shared.nasaAPOD)
     }
-}
-
-extension NasaPODViewController {
-    func fetchAPOD() {
-        
-        // присвоили переменной String адрес, по которому собираемся переходить
-        guard let contentURL = URL(string: URLExamples.nasaAPOD.rawValue) else { return }
-        
-        // запускаем сессию по нашей ссылке
-        URLSession.shared.dataTask(with: contentURL) { data, _, error in
-            // проверяем наличие данных
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description!")
-                return
-            }
-            // декодируем файл по нашей структуре через do/catch - позволяет поймать ошибку
-            do {
-                // пытаемся сразу присвоить значение переменной внутри контроллера, декодируя json
-                self.apod = try JSONDecoder().decode(NasaPOD.self, from: data)
-                
-                // работа с картинкой - создаем переменную с URL адресом по string из json
-                guard let imageURL = URL(string: self.apod?.url ?? "") else { return }
-                
-                // создаем переменную типа Data по инициализатору URL
-                guard let imageData = try? Data(contentsOf: imageURL) else { return }
-                
-                // переключаемся на главный поток
-                DispatchQueue.main.async {
-                    // обновляем значение лейбла
-                    self.descriptionLabel.text = self.apod?.description
-                    // обновляем значение картинки по инициализатору Data
-                    self.imageView.image = UIImage(data: imageData)
-                    // останавливаем activityIndicator
-                    self.activityIndicator.stopAnimating()
-                }
-              // ловим ошибку, если она есть
-            } catch let error {
-                print(error.localizedDescription)
-            }
+    
+    private func fetchData(from url: String?) {
+        NetworkManager.shared.fetchAPOD(from: url) { apod in
+            self.apod = apod
+            self.descriptionLabel.text = apod.description
             
-        }.resume()// обязательный метод в конце сессии
+            guard let imageURL = URL(string: apod.url ?? "") else { return }
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            
+            self.imageView.image = UIImage(data: imageData)
+          
+        }
     }
-   
+    
 }
