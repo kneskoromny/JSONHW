@@ -42,10 +42,7 @@ class NasaPODViewController: UIViewController {
             guard let imageData = try? Data(contentsOf: imageURL) else { return }
             
             self.imageView.image = UIImage(data: imageData)
-            
-            
-            
-            
+          
         }
     }
     

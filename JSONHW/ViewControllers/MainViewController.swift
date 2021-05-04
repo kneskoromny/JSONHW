@@ -64,9 +64,16 @@ class MainViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let apodVC = segue.destination as? NasaPODViewController else { return }
-//        apodVC.fetchData()
+        let navigationVC = segue.destination as! UINavigationController
+        let jokesVC = navigationVC.topViewController as! JokesViewController
+
     }
+    
+    
+    @IBAction func testButtonPressed() {
+        fetchJoke()
+    }
+    
     
     //MARK: - Private Methods
     private func buttonAnimate(
@@ -84,5 +91,32 @@ class MainViewController: UIViewController {
     }
     
     
+}
+
+extension MainViewController {
+    func fetchJoke() {
+        guard let contentURL = URL(string: APIManager.shared.joke) else { return }
+        
+        URLSession.shared.dataTask(with: contentURL) { data, response, error in
+            if let error = error {
+                print("error 1")
+                print(error.localizedDescription)
+            }
+            guard let data = data, let response = response else { return }
+            print("well! 2")
+            print(response)
+            do {
+                let jokes = try JSONDecoder().decode([Joke].self, from: data)
+                print("super! 3")
+                print(jokes)
+            } catch {
+                print("error 4")
+                print(error.localizedDescription)
+            }
+        }.resume()
+        
+        
+        
+    }
 }
 
