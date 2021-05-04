@@ -8,10 +8,10 @@
 
 struct NasaPOD: Decodable {
     
-    var copyright: String?
-    var date: String?
-    var title: String?
-    var url: String?
+    let copyright: String?
+    let date: String?
+    let title: String?
+    let url: String?
     
     var description: String {
         """

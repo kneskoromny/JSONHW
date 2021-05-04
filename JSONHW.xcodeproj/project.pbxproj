@@ -89,7 +89,6 @@
 				F7A52170263C372B0018A5F7 /* ViewControllers */,
 				F7A52173263C37630018A5F7 /* Models */,
 				F7A52172263C374C0018A5F7 /* Storyboards */,
-				F7A52174263C379F0018A5F7 /* Services */,
 				F7A5216F263C37170018A5F7 /* Supports */,
 				F7A52171263C373B0018A5F7 /* Resources */,
 			);
@@ -139,13 +138,6 @@
 				F7A52175263C4DBB0018A5F7 /* NasaPOD.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		F7A52174263C379F0018A5F7 /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
