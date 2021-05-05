@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7EDC34A3B5E2957BB99DA6F0 /* Pods_JSONHW.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3209A6738BAD1F2049DF63D4 /* Pods_JSONHW.framework */; };
 		F7968397263D5BAA00EDE3B4 /* HappyObamaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */; };
+		F79683D52641242600EDE3B4 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79683D42641242600EDE3B4 /* NetworkManager.swift */; };
+		F79683D7264130A100EDE3B4 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79683D6264130A100EDE3B4 /* APIManager.swift */; };
+		F79683DD26413BC900EDE3B4 /* Joke.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79683DC26413BC900EDE3B4 /* Joke.swift */; };
+		F79683DF264143B100EDE3B4 /* JokesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79683DE264143B100EDE3B4 /* JokesViewController.swift */; };
+		F79683E12641493100EDE3B4 /* JokeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79683E02641493100EDE3B4 /* JokeTableViewCell.swift */; };
 		F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215B263C36720018A5F7 /* AppDelegate.swift */; };
 		F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215D263C36720018A5F7 /* SceneDelegate.swift */; };
 		F7A52160263C36720018A5F7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A5215F263C36720018A5F7 /* MainViewController.swift */; };
@@ -24,6 +29,11 @@
 		3E1F57A64A5DF9DA3724FD3D /* Pods-JSONHW.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONHW.debug.xcconfig"; path = "Target Support Files/Pods-JSONHW/Pods-JSONHW.debug.xcconfig"; sourceTree = "<group>"; };
 		A94C1241C6893658EA0D5CAD /* Pods-JSONHW.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JSONHW.release.xcconfig"; path = "Target Support Files/Pods-JSONHW/Pods-JSONHW.release.xcconfig"; sourceTree = "<group>"; };
 		F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyObamaViewController.swift; sourceTree = "<group>"; };
+		F79683D42641242600EDE3B4 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		F79683D6264130A100EDE3B4 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		F79683DC26413BC900EDE3B4 /* Joke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Joke.swift; path = JSONHW/Managers/Joke.swift; sourceTree = SOURCE_ROOT; };
+		F79683DE264143B100EDE3B4 /* JokesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokesViewController.swift; sourceTree = "<group>"; };
+		F79683E02641493100EDE3B4 /* JokeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JokeTableViewCell.swift; sourceTree = "<group>"; };
 		F7A52158263C36720018A5F7 /* JSONHW.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONHW.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F7A5215B263C36720018A5F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F7A5215D263C36720018A5F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +75,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F79683D3264123C800EDE3B4 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F79683D6264130A100EDE3B4 /* APIManager.swift */,
+				F79683D42641242600EDE3B4 /* NetworkManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		F7A5214F263C36720018A5F7 = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +105,7 @@
 		F7A5215A263C36720018A5F7 /* JSONHW */ = {
 			isa = PBXGroup;
 			children = (
+				F79683D3264123C800EDE3B4 /* Managers */,
 				F7A52170263C372B0018A5F7 /* ViewControllers */,
 				F7A52173263C37630018A5F7 /* Models */,
 				F7A52172263C374C0018A5F7 /* Storyboards */,
@@ -111,6 +131,8 @@
 				F7A5215F263C36720018A5F7 /* MainViewController.swift */,
 				F7A5217B263C5AA20018A5F7 /* NasaPODViewController.swift */,
 				F7968396263D5BAA00EDE3B4 /* HappyObamaViewController.swift */,
+				F79683DE264143B100EDE3B4 /* JokesViewController.swift */,
+				F79683E02641493100EDE3B4 /* JokeTableViewCell.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -136,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				F7A52175263C4DBB0018A5F7 /* NasaPOD.swift */,
+				F79683DC26413BC900EDE3B4 /* Joke.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -254,10 +277,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F79683D7264130A100EDE3B4 /* APIManager.swift in Sources */,
 				F7A5217C263C5AA20018A5F7 /* NasaPODViewController.swift in Sources */,
 				F7A52160263C36720018A5F7 /* MainViewController.swift in Sources */,
 				F7968397263D5BAA00EDE3B4 /* HappyObamaViewController.swift in Sources */,
+				F79683D52641242600EDE3B4 /* NetworkManager.swift in Sources */,
+				F79683DD26413BC900EDE3B4 /* Joke.swift in Sources */,
+				F79683E12641493100EDE3B4 /* JokeTableViewCell.swift in Sources */,
 				F7A5215C263C36720018A5F7 /* AppDelegate.swift in Sources */,
+				F79683DF264143B100EDE3B4 /* JokesViewController.swift in Sources */,
 				F7A5215E263C36720018A5F7 /* SceneDelegate.swift in Sources */,
 				F7A52176263C4DBC0018A5F7 /* NasaPOD.swift in Sources */,
 			);

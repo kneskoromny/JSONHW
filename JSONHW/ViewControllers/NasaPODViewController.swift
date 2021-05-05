@@ -30,32 +30,20 @@ class NasaPODViewController: UIViewController {
             Пожалуйста, подождите пару секунд.
             Я загружаю кое-что интересное для Вас:)
             """
+        fetchData(from: APIManager.shared.nasaAPOD)
     }
-}
-
-extension NasaPODViewController {
-    func fetchAPOD() {
-        guard let contentURL = URL(string: URLExamples.nasaAPOD.rawValue) else { return }
-       
-        URLSession.shared.dataTask(with: contentURL) { data, _, error in
+    
+    private func fetchData(from url: String?) {
+        NetworkManager.shared.fetchAPOD(from: url) { apod in
+            self.apod = apod
+            self.descriptionLabel.text = apod.description
             
-            guard let data = data else {
-                print(error?.localizedDescription ?? "No error description!")
-                return
-            }
-            do {
-                self.apod = try JSONDecoder().decode(NasaPOD.self, from: data)
-                guard let imageURL = URL(string: self.apod?.url ?? "") else { return }
-                guard let imageData = try? Data(contentsOf: imageURL) else { return }
+            guard let imageURL = URL(string: apod.url ?? "") else { return }
+            guard let imageData = try? Data(contentsOf: imageURL) else { return }
             
-                DispatchQueue.main.async {
-                    self.descriptionLabel.text = self.apod?.description
-                    self.imageView.image = UIImage(data: imageData)
-                    self.activityIndicator.stopAnimating()
-                }
-            } catch let error {
-                print(error.localizedDescription)
-            }
-        }.resume()
+            self.imageView.image = UIImage(data: imageData)
+          
+        }
     }
+    
 }

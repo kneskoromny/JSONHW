@@ -7,11 +7,6 @@
 
 import Spring
 
-enum URLExamples: String {
-    case nasaAPOD = "https://api.nasa.gov/planetary/apod?api_key=lKtTVBLWcJwffu52fyYVGG2E8tjyEsp04LWMtLtx"
-    case happyObama = "https://i.postimg.cc/9XD970g1/image.jpg"
-}
-
 class MainViewController: UIViewController {
 
     @IBOutlet weak var springLabel: SpringLabel!
@@ -63,10 +58,6 @@ class MainViewController: UIViewController {
         }
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let apodVC = segue.destination as? NasaPODViewController else { return }
-        apodVC.fetchAPOD()
-    }
     
     //MARK: - Private Methods
     private func buttonAnimate(
@@ -85,4 +76,5 @@ class MainViewController: UIViewController {
     
     
 }
+
 
